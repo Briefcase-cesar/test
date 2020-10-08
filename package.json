@@ -13,8 +13,8 @@
     "lint": "npm run format && eslint src/",
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "lint:fix": "eslint ./src/ --fix",
-    "deploy:qa": "gh-pages -d ./dist -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
