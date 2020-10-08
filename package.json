@@ -14,7 +14,9 @@
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint:fix": "eslint ./src/ --fix",
+    "deploy:qa": "gh-pages -d ./dist -b gh-pages"
   },
   "dependencies": {
     "babel-eslint": "^10.1.0",
